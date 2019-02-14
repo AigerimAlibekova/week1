@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace task2
 {
-    class Program  //КОММЕЕНННТЫЫЫЫЫ ВНИЗУ
+    class Program  
     {
         static bool Prime(int x) //recursive function
         {
@@ -32,7 +32,7 @@ namespace task2
         }
         static void Main(string[] args)
         {
-            List<string> output = new List<string>(); //v
+            List<string> output = new List<string>();
 
             FileStream fs = new FileStream(@"C:\Users\Админ\Desktop\PP2\lab2\task2input.txt", FileMode.Open, FileAccess.Read);
             StreamReader sr = new StreamReader(fs);
@@ -42,9 +42,9 @@ namespace task2
 
             foreach (var x in n) //для каждой переменной х в string n
             {
-                if (PrimeString(x))  //если число простое, добавляем его в ,,,,,,,,,,,,,
+                if (PrimeString(x))  //если число простое, добавляем его в пустой стринг
                 {
-                    output.Add(x); //pbx
+                    output.Add(x); 
                 }
             }
 
