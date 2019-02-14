@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FarManager2
+namespace task
 {
-    enum FARMode
+    enum Df
     {
         DIR,
         FILE
@@ -132,7 +132,7 @@ namespace FarManager2
     {
         static void Main(string[] args)
         {
-            FARMode mode = FARMode.DIR;
+            Df mode = Df.DIR;
             DirectoryInfo root = new DirectoryInfo(@"C:\Users\Админ\Desktop\PP2");
             Stack<Layer> history = new Stack<Layer>();
             history.Push(
@@ -146,7 +146,7 @@ namespace FarManager2
 
             while (true)
             {
-                if (mode == FARMode.DIR)
+                if (mode == Df.DIR)
                 {
                     history.Peek().Draw();
                 }
@@ -163,13 +163,13 @@ namespace FarManager2
                         history.Peek().SelectedItem++;
                         break;
                     case ConsoleKey.Backspace:
-                        if (mode == FARMode.DIR)
+                        if (mode == Df.DIR)
                         {
                             history.Pop();
                         }
                         else
                         {
-                            mode = FARMode.DIR;
+                            mode = Df.DIR;
                             Console.ForegroundColor = ConsoleColor.White;
                         }
                         break;
@@ -188,7 +188,7 @@ namespace FarManager2
                         }
                         else
                         {
-                            mode = FARMode.FILE;
+                            mode = Df.FILE;
                             Console.BackgroundColor = ConsoleColor.White;
                             Console.Clear();
                             Console.ForegroundColor = ConsoleColor.Black;
