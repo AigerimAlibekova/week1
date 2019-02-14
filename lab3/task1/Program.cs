@@ -111,7 +111,7 @@ namespace task
             {
                 if (i == SelectedItem)
                 {
-                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.BackgroundColor = ConsoleColor.Green;
                 }
                 else
                     Console.BackgroundColor = ConsoleColor.Black;
