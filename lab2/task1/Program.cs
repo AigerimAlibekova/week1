@@ -9,7 +9,7 @@ namespace task1
 {
     class Program
     {
-        static void Solve(string s) //КОМММЕЕЕНТТЫЫЫЫ ВНИЗУУУУУУУУУУУУ
+        static void Solve(string s)
         {
             bool ok = true;
             for(int i = 0; i < s.Length; i++)
